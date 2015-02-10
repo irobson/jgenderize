@@ -5,10 +5,7 @@ import com.github.irobson.jgenderize.model.NameGender;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- *
- * @author Robson_Farias
- */
+
 public class GenderTest {
 
     @Test

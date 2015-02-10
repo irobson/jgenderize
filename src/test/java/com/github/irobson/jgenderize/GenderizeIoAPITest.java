@@ -22,11 +22,11 @@ public class GenderizeIoAPITest {
         NameGender gender = api.getGender("Kim", new Locale("da", "DK"));
         Assert.assertTrue(gender.isMale());
     }
-    
-        @Test
+
+    @Test
     public void testGetMultiNameGenderByLocalization() {
         Genderize api = GenderizeIoAPI.create();
-        List<NameGender> genders = api.getGenders(new String[] {"Robson", "Gilmar", "Marlise"}, new Locale("pt", "BR"));
+        List<NameGender> genders = api.getGenders(new String[]{"Robson", "Gilmar", "Marlise"}, new Locale("pt", "BR"));
         Assert.assertEquals(3, genders.size());
         Assert.assertTrue(genders.get(0).isMale());
         Assert.assertTrue(genders.get(1).isMale());

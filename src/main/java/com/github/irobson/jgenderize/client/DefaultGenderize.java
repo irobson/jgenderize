@@ -10,10 +10,6 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.GenericType;
 import javax.ws.rs.core.MediaType;
 
-/**
- *
- * @author Robson_Farias
- */
 public class DefaultGenderize implements Genderize, Serializable {
 
     private final Client client = ClientBuilder.newBuilder().newClient();
