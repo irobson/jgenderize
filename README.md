@@ -21,7 +21,7 @@ NameGender gender = api.getGender("John", new Locale("pt", "BR"));
 System.out.println("John is: "+gender.getGender());
 System.out.println("is John male? " + gender.isMale());
 ```
-Lots of names? It is ordered.
+Lots of names? It is sorted.
 
 ```java
 Genderize api = GenderizeIoAPI.create();
