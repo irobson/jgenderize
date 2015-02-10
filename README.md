@@ -25,5 +25,11 @@ Lots of names? It is ordered.
 
 ```java
 Genderize api = GenderizeIoAPI.create();
-List<NameGender> genders = api.getGenders("Robson", "Fernando", "Marlise", "Plinio");
+List<NameGender> genders = api.getGenders("Robson", "Marlise", "Gilmar");
+```
+Does it works with l10n too? sure.
+
+```java
+Genderize api = GenderizeIoAPI.create();
+List<NameGender> genders = api.getGenders(new String[] {"ted", "marshall", "lilly", "robin", "barney", "melissa"}, new Locale("en", "US"));
 ```
