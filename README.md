@@ -4,7 +4,7 @@ Client for http://genderize.io web service.
 
 Simple Java extension to know the gender of a given name.
 
-You want to know a gender of "John" ?
+What is the gender for "John" ?
 
 ```java
     Genderize api = GenderizeIoAPI.create();
