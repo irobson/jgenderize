@@ -2,7 +2,7 @@
 
 Client for http://genderize.io web service.
 
-Simple Java extension to know the gender of a given name.
+Simple Java extension to know the gender of a given first name.
 
 What is the gender for "John" ?
 
