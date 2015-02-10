@@ -10,7 +10,7 @@ What is the gender for "John" ?
     Genderize api = GenderizeIoAPI.create();
     NameGender gender = api.getGender("John");
     System.out.println("John is: "+gender.getGender());
-    System.out.println("John is male? " + gender.isMale());
+    System.out.println("is John male? " + gender.isMale());
     System.out.println("Who? " + gender.getName());
 
 ```
@@ -20,4 +20,4 @@ What about "John" in Brazil? Localization support.
     Genderize api = GenderizeIoAPI.create();
     NameGender gender = api.getGender("John", new Locale("pt", "BR");
     System.out.println("John is: "+gender.getGender());
-    System.out.println("John is male? " + gender.isMale());
+    System.out.println("is John male? " + gender.isMale());
