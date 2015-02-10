@@ -1,6 +1,6 @@
-# jgenderize
+# jGenderize
 
-Client for `Genderize.io <http://genderize.io/>`_ web service.
+Client for http://genderize.io web service.
 
 Simple Java extension to know the gender of a given name.
 
