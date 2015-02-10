@@ -17,7 +17,13 @@ What about "John" in Brazil? Localization support.
 
 ```java
 Genderize api = GenderizeIoAPI.create();
-NameGender gender = api.getGender("John", new Locale("pt", "BR");
+NameGender gender = api.getGender("John", new Locale("pt", "BR"));
 System.out.println("John is: "+gender.getGender());
 System.out.println("is John male? " + gender.isMale());
+```
+Lots of names? It is ordered.
+
+```java
+Genderize api = GenderizeIoAPI.create();
+List<NameGender> genders = api.getGenders("Robson", "Fernando", "Marlise", "Plinio");
 ```
