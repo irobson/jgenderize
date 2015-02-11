@@ -40,6 +40,9 @@ public class NameGender implements Serializable {
     }
 
     public Gender getGenderType() {
+        if (this.gender == null) {
+            return Gender.NULL;
+        }
         return Gender.valueOf(this.gender.toUpperCase());
     }
 
