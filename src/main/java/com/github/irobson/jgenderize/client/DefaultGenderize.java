@@ -14,7 +14,7 @@ public class DefaultGenderize implements Genderize, Serializable {
 
     private final Client client = ClientBuilder.newBuilder().newClient();
     
-    private static final String GENDERIZE_IO_API_URL = "http://api.genderize.io/";
+    private static final String GENDERIZE_IO_API_URL = "https://api.genderize.io/";
 
     public NameGender getGender(String name, Locale locale) {
         WebTarget target = client.target(GENDERIZE_IO_API_URL).queryParam("name", name);
