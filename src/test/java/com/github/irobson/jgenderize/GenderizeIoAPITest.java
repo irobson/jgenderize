@@ -61,4 +61,11 @@ public class GenderizeIoAPITest {
         Assert.assertEquals(1, genders.size());
         Assert.assertTrue(genders.get(0).isMale());
     }
+
+    @Test
+    public void testGetSingleNameUnknownGender() {
+        NameGender gender = GenderizeIoAPI.create().getGender("Thunderhorse");
+        Assert.assertFalse(gender.isFemale());
+        Assert.assertFalse(gender.isMale());
+    }
 }
