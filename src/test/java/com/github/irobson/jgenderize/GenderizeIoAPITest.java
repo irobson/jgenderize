@@ -4,6 +4,7 @@ import com.github.irobson.jgenderize.client.Genderize;
 import com.github.irobson.jgenderize.model.NameGender;
 import java.util.List;
 import java.util.Locale;
+import javax.ws.rs.NotAuthorizedException;
 import junit.framework.Assert;
 import org.junit.Test;
 
@@ -43,4 +44,28 @@ public class GenderizeIoAPITest {
         Assert.assertTrue(genders.get(2).isFemale());
     }
 
+    @Test(expected=NotAuthorizedException.class)
+    public void testGetSingleNameBadAPIKey() {
+        GenderizeIoAPI.create("invalid_api_key").getGender("Kim");
+    }
+
+    @Test
+    public void testGetNoNames() {
+        List<NameGender> genders = GenderizeIoAPI.create().getGenders();
+        Assert.assertEquals(0, genders.size());
+    }
+
+    @Test
+    public void testGetSingleNameGenderWithMultiMethod() {
+        List<NameGender> genders = GenderizeIoAPI.create().getGenders("Robson");
+        Assert.assertEquals(1, genders.size());
+        Assert.assertTrue(genders.get(0).isMale());
+    }
+
+    @Test
+    public void testGetSingleNameUnknownGender() {
+        NameGender gender = GenderizeIoAPI.create().getGender("Thunderhorse");
+        Assert.assertFalse(gender.isFemale());
+        Assert.assertFalse(gender.isMale());
+    }
 }
