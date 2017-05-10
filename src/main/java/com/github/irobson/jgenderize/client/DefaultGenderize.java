@@ -59,12 +59,6 @@ public class DefaultGenderize implements Genderize, Serializable {
         }
         Invocation.Builder builder = target.request(MediaType.APPLICATION_JSON_TYPE);
 
-        if (names.length == 1) {
-            // Response format is different if requesting only one name.
-            NameGender nameGender = builder.get(NameGender.class);
-            return Collections.singletonList(nameGender);
-        }
-
         return builder.get(NAME_GENDER_LIST_TYPE);
     }
 
